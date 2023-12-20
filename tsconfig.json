@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",  // Agrega esta línea para especificar la carpeta de origen
+    "baseUrl": ".",  // Cambiado de "./" a "." para usar la raíz del proyecto como base
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": false,  // Cambiado de "strictNullChecks": false y "noImplicitAny": false a "strict": false
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
+  },
+  "include": [
+    "src/**/*.ts"  // Asegúrate de incluir solo los archivos TypeScript en la compilación
+  ],
+  "exclude": [
+    "node_modules",  // Excluye la carpeta de node_modules
+    "dist"  // Excluye la carpeta de salida
+  ]
+}
+

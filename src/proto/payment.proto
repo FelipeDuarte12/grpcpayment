@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package payment;
+
+service PaymentService {
+  rpc CreateTransaction(TransactionRequest) returns (TransactionResponse);
+}
+
+message TransactionRequest {
+  string buyOrder = 1;
+  string sessionId = 2;
+  int32 amount = 3;
+  string returnUrl = 4;
+}
+
+message TransactionResponse {
+  string url = 1;
+  string token = 2;
+}
